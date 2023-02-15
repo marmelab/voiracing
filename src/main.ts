@@ -1,4 +1,7 @@
 import "./style.css";
-import { controlsRecognition } from "./controlsRecognition";
+import init from "./controlsRecognition";
+import { update } from "./gauge";
 
-controlsRecognition();
+update();
+
+init();
