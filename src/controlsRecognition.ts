@@ -1,13 +1,12 @@
-import * as tf from "@tensorflow/tfjs";
 import * as speechCommands from "@tensorflow-models/speech-commands";
+import { update } from "./gauge";
 import {
   accelerate,
-  maintainSpeed,
-  decelerate,
   brake,
+  decelerate,
   getCurrentSpeed,
+  maintainSpeed,
 } from "./speed";
-import { update } from "./gauge";
 
 const URL = window.location.origin + "/model/";
 
