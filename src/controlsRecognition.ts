@@ -41,8 +41,6 @@ async function init() {
   // 2. A configuration object with adjustable fields
   recognizer.listen(
     async (result) => {
-      const scores = result.scores; // probability of prediction for each class
-      // render the probability scores per class
       let action = "decelerate";
       let max = 0;
       for (let i = 0; i < classLabels.length; i++) {
