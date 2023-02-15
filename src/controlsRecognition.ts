@@ -8,7 +8,7 @@ import {
   maintainSpeed,
 } from "./speed";
 
-const URL = window.location.origin + "/model/";
+const URL = window.location.origin + "/voiracing/model/";
 
 async function createModel() {
   const checkpointURL = URL + "model.json"; // model topology
