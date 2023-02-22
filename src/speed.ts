@@ -4,7 +4,7 @@ let currentSpeed = 0;
 
 export const getCurrentSpeed = () => currentSpeed;
 export const accelerate = () => {
-  currentSpeed = Math.min(currentSpeed + 10, maxSpeed);
+  currentSpeed = Math.min(currentSpeed + 2, maxSpeed);
   return currentSpeed;
 };
 
@@ -13,11 +13,11 @@ export const maintainSpeed = () => {
 };
 
 export const decelerate = () => {
-  currentSpeed = Math.max(currentSpeed - 5, 0);
+  currentSpeed = Math.max(currentSpeed - 1, 0);
   return currentSpeed;
 };
 
 export const brake = () => {
-  currentSpeed = Math.max(currentSpeed - 20, 0);
+  currentSpeed = Math.max(currentSpeed - 5, 0);
   return currentSpeed;
 };

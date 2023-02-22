@@ -41,7 +41,7 @@ async function init() {
   // 2. A configuration object with adjustable fields
   recognizer.listen(
     async (result) => {
-      let action = "decelerate";
+      let action = "break";
       let max = 0;
       for (let i = 0; i < classLabels.length; i++) {
         const score = result.scores[i] as number;
@@ -71,10 +71,10 @@ async function init() {
       update(getCurrentSpeed());
     },
     {
-      includeSpectrogram: true, // in case listen should return result.spectrogram
-      probabilityThreshold: 0.75,
+      includeSpectrogram: false, // in case listen should return result.spectrogram
+      probabilityThreshold: 0,
       invokeCallbackOnNoiseAndUnknown: true,
-      overlapFactor: 0.5, // probably want between 0.5 and 0.75. More info in README
+      overlapFactor: 0.75, // probably want between 0.5 and 0.75. More info in README
     }
   );
 
