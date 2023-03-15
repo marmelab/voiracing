@@ -1,7 +1,9 @@
 import "./style.css";
-import init from "./controlsRecognition";
+import { initVoice } from "./voiceControlsRecognition";
+import { initPose } from "./poseControlsRecognition";
 import { update } from "./gauge";
 
 update();
 
-init();
+initVoice();
+initPose();
