@@ -41,7 +41,7 @@ async function init() {
   // 2. A configuration object with adjustable fields
   recognizer.listen(
     async (result) => {
-      let action = "break";
+      let action = "Brake";
       let max = 0;
       for (let i = 0; i < classLabels.length; i++) {
         const score = result.scores[i] as number;
@@ -59,7 +59,7 @@ async function init() {
         case "Low":
           maintainSpeed();
           break;
-        case "break":
+        case "Brake":
           brake();
           break;
         case "Background Noise":
