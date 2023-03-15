@@ -5,12 +5,43 @@
     <link rel="icon" type="image/svg+xml" href="/voiracing/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Voiracing</title>
-    <script type="module" crossorigin src="/voiracing/assets/index-4283468b.js"></script>
-    <link rel="stylesheet" href="/voiracing/assets/index-3443e464.css">
+    <script type="module" crossorigin src="/voiracing/assets/index-45e3facd.js"></script>
+    <link rel="stylesheet" href="/voiracing/assets/index-d1c26615.css">
   </head>
   <body>
-    <div id="app"></div>
-    <canvas id="gauge" width="200" height="150"></canvas>
+    <div id="app">
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          gap: 2rem;
+          text-align: right;
+          flex-shrink: 0;
+          width: 100%;
+          flex-wrap: wrap;
+          place-content: center;
+        "
+      >
+        <div class="controls">
+          <div id="voice-controls"></div>
+          <canvas id="gauge" width="300" height="300"></canvas>
+        </div>
+        <div class="controls" style="align-self: flex-end">
+          <div id="pose-controls"></div>
+          <canvas
+            id="pose"
+            width="300"
+            height="300"
+            style="width: 300px; height: 300px"
+          ></canvas>
+        </div>
+      </div>
+      <div id="road">
+        <div id="car-wrapper">
+          <img id="car" src="/voiracing/car.svg" alt="Your car" />
+        </div>
+      </div>
+    </div>
     
   </body>
 </html>
